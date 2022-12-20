@@ -29,5 +29,9 @@ for relationships_followers in followers['relationships_followers']:
 
 print(following_list.difference(follower_list))
 
+data_followers.close()
+data_following.close()
+
+
 
 
