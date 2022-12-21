@@ -26,8 +26,9 @@ for relationships_followers in followers['relationships_followers']:
         follower_username = data2['value']
         follower_list.add(follower_username)
 
-
-print(following_list.difference(follower_list))
+length = len(following_list.difference(follower_list))
+print(f'The number of users that do not follow you back: {length}')
+print(*following_list.difference(follower_list), sep = '\n')
 
 data_followers.close()
 data_following.close()
